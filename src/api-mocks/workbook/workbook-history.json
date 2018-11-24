@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Tamandua tetradactyla",
+        "url": "http://dummyimage.com/204x217.bmp/cc0000/ffffff"
+    },
+    {
+        "id": 2,
+        "name": "Aegypius tracheliotus",
+        "url": "http://dummyimage.com/125x182.jpg/dddddd/000000"
+    },
+    {
+        "id": 3,
+        "name": "Ursus maritimus",
+        "url": "http://dummyimage.com/226x201.jpg/cc0000/ffffff"
+    },
+    {
+        "id": 4,
+        "name": "Charadrius tricollaris",
+        "url": "http://dummyimage.com/129x139.bmp/5fa2dd/ffffff"
+    },
+    {
+        "id": 5,
+        "name": "Eolophus roseicapillus",
+        "url": "http://dummyimage.com/118x160.png/cc0000/ffffff"
+    }
+]

@@ -1,0 +1,11 @@
+<div class="column-layout__container">
+  <div class="column-layout__sidebar-left" [style.flexBasis]="leftSidebarWidth" *ngIf="displayLeftSidebar">
+      <ng-content select="[sidebar-left]"></ng-content>
+  </div>
+  <div class="column-layout__panel-centre">
+      <ng-content select="[panel-centre]"></ng-content>
+  </div>
+  <div class="column-layout__sidebar-right" [style.flexBasis]="rightSidebarWidth" *ngIf="displayRightSidebar">
+      <ng-content select="[sidebar-right]"></ng-content>
+  </div>
+</div>

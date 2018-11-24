@@ -1,0 +1,100 @@
+@import 'mixin';
+
+.collapsible-list {
+
+    background-color: #27394F;
+    border-radius: 2px;
+    color: #F2F3F4;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin: 4px 4px 10px 4px;
+    overflow: hidden;
+    transition: border-right-color 0.5s, border-left-color 0.5s;
+
+    &--left-border {
+        border-left: 4px solid #0F83DB;
+        margin-left: 0;
+
+        &:hover {
+            border-left-color: lightpink;
+        }
+    }
+
+    &--right-border {
+        border-right: 4px solid #0F83DB;
+        margin-right: 0;
+
+        &:hover {
+            border-right-color: lightpink;
+        }
+    }
+
+    &__header {
+        padding: 4px 4px 6px 4px;
+        cursor: pointer;
+        transition: background 200ms ease-in;
+
+        &:hover {
+            background: #32465f;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        position: relative;
+
+        &::after {
+            @include icon('down-open', 13px);
+            right: 0;
+            top: 9px;
+            transform: translateX(-50%) rotate(0);
+            transition: transform 150ms ease-in;
+        }
+    }
+
+    &__content {
+        font-size: 14px;
+        transition: height 150ms ease-in;
+        overflow: hidden;
+    }
+
+    &__list {
+        margin : 8px 0;
+        padding: 0;
+    }
+
+    &--collapsed {
+
+        .collapsible-list {
+
+            &__title {
+
+                &::after {
+                    transform: translateX(-50%) rotate(-90deg);
+                }
+
+            }
+
+        }
+
+    }
+
+    &__list-item {
+        line-height: 20px;
+        padding-left: 24px;
+
+        a {
+            color: #f2f3f4;
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #7dcdff;
+                text-decoration: underline;
+            }
+        }
+    }
+}

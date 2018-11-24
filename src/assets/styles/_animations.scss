@@ -1,0 +1,96 @@
+/* Animation of Angularjs attributes */
+
+.animate-all,
+.animate-show,
+.animate-hide {
+    @include transition();
+
+    opacity: 1;
+}
+
+.animate-hide.ng-hide {
+    opacity: 0;
+}
+
+.animate-fast {
+    @include transition($timing: 250ms)
+}
+
+@-webkit-keyframes growHeight {
+    to {
+        max-height: 150px;
+    }
+}
+
+@keyframes growHeight {
+    to {
+        max-height: 150px;
+    }
+}
+
+@-webkit-keyframes shrinkHeight {
+    to {
+        max-height: 0;
+    }
+}
+
+@keyframes shrinkHeight {
+    to {
+        max-height: 0;
+    }
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blinking-50-50-animation {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0
+    }
+}
+
+// @-webkit-keyframes infinite-spinning {
+//   0% { -webkit-transform: rotate(0) }
+//   100% { -webkit-transform: rotate(360deg) }
+// }
+
+// @keyframes infinite-spinning {
+//   0%{
+//     transform: rotate(0deg);
+//     -webkit-transform: rotate(0deg);
+//   } 50% {
+//     transform: rotate(360deg);
+//     -webkit-transform: rotate(360deg);
+//   }
+// }

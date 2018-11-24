@@ -1,0 +1,152 @@
+@import 'mixin';
+@import 'flexbox';
+
+.detailed-workbook {
+    background: #203145;
+    margin: 8px;
+    padding: 15px;
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__thumbnail {
+        height: 192px;
+        width: 192px;
+    }
+
+    &__summary-container {
+        @include flexbox();
+    }
+
+    &__summary {
+        padding-right: 20px;
+    }
+
+    &__title {
+        color: #F2F3F4;
+        text-decoration: none;
+
+        &:hover {
+            color: #7dcdff;
+            text-decoration: none;
+        }
+    }
+
+    &__labels {
+        margin-bottom: 6px;
+    }
+
+    &__label {
+        background: #0F83DB;
+        border-radius: 2px;
+        font-size: 0.7em;
+        padding: 4px 6px;
+
+        & + & {
+            margin-left: 8px;
+        }
+    }
+
+    &__more-labels {
+        color: #41B9E7;
+        font-size: 0.7em;
+        margin-left: 6px;
+    }
+
+    &__description {
+        font-size: 0.8em;
+        height: 135px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    &__preview {
+        position: relative;
+    }
+
+    &__star {
+        display: inline-block;
+        left: -25px;
+        position: absolute;
+
+        &::before {
+            @include icon('star');
+            color: #FFBA00;
+        }
+
+        &--empty {
+            &::before {
+                @include icon('star-empty');
+                color: white;
+            }
+        }
+    }
+
+    &__actions {
+        font-size: 0.8em;
+
+        span {
+            color: #41B9E7;
+            margin-right: 10px;
+            padding-left: 15px;
+            position: relative;
+
+            &::before {
+                color: #A6ACB3;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                margin-top: -1px;
+            }
+        }
+    }
+
+    &__like {
+        &::before {
+            @include icon('thumbs-up', 11px, 11px);
+        }
+    }
+
+    &__comment {
+        &::before {
+            @include icon('comment-empty', 11px, 11px);
+        }
+    }
+
+    &__share {
+        &::before {
+            @include icon('forward', 11px, 11px);
+        }
+    }
+
+    &__comments-container {
+        border-top: 1px solid #475361;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    &__comments-meta {
+        color: #A6ACB3;
+        font-size: 0.8em;
+    }
+
+    &__comment-count {
+        margin-left: 6px;
+
+        &::before {
+            content: '•';
+            left: -4px;
+            position: relative;
+        }
+    }
+
+    &__comments-toggle {
+        color: #41B9E7;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,52 @@
+@import 'fontello';
+
+/**
+    Icon fonts, wrapper for fontello.
+    Usage: @include icon('home');
+**/
+@mixin icon($classname: 'arrow', $height: 15px, $width: 15px, $font-size: $height ) {
+    @extend .icon-#{$classname};
+    font-family: 'fontello';
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: normal;
+    height: $height;
+    line-height: $height;
+    position: absolute;
+    text-align: center;
+    width: $width;
+}
+
+/**
+    Breakpoint sizes for various responsive sizes.
+    Usage: padding and font-size increasing once the viewport gets over 1024px:
+    .site-header {
+        padding: 2rem;
+        font-size: 1.8rem;
+        @include breakpoint('tablet-wide') {
+            padding-top: 4rem;
+            font-size: 2.4rem;
+        }
+    }
+**/
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin breakpoint($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

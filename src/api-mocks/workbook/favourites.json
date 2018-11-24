@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Snycerus caffer",
+        "url": "http://dummyimage.com/196x130.bmp/dddddd/000000"
+    },
+    {
+        "id": 2,
+        "name": "Anhinga rufa",
+        "url": "http://dummyimage.com/191x116.jpg/dddddd/000000"
+    },
+    {
+        "id": 3,
+        "name": "Acridotheres tristis",
+        "url": "http://dummyimage.com/226x240.png/ff4444/ffffff"
+    },
+    {
+        "id": 4,
+        "name": "Rana sp.",
+        "url": "http://dummyimage.com/158x143.png/dddddd/000000"
+    },
+    {
+        "id": 5,
+        "name": "Ovis canadensis",
+        "url": "http://dummyimage.com/170x193.png/ff4444/ffffff"
+    }
+]

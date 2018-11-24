@@ -1,0 +1,27 @@
+<app-column-layout class="workbook-overview">
+  <div sidebar-left>
+    <div class="workbook-overview__sidebar-left-title">Key workbooks</div>
+
+    <div class="workbook-overview__key-reports">
+      <app-key-workbooks></app-key-workbooks>
+    </div>
+
+  </div>
+  <div panel-centre>
+    <div class="workbook-overview__centre-panel-title">Discover Workbooks</div>
+
+    <!-- <app-loading-bar *ngIf="centreReportsLoading"></app-loading-bar>
+    <p *ngIf="centreReportsError">An error occurred loading the centre panel.</p> -->
+
+    <app-workbook-list></app-workbook-list>
+
+  </div>
+  <div sidebar-right>
+
+    <!-- Using async pipe to avoid manual cancellation of store subscription -->
+    <app-collapsible-list [headerText]="'Favourite Workbooks'" [data]="favouriteWorkbooks$ | async" [isCollapsed]="false"></app-collapsible-list>
+    <app-collapsible-list [headerText]="'My History'" [data]="workbookHistory$ | async"></app-collapsible-list>
+    <app-collapsible-list [headerText]="'Newsletters'" [data]="newsletters$ | async"></app-collapsible-list>
+
+  </div>
+</app-column-layout>

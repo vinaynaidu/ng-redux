@@ -1,0 +1,42 @@
+<div class="workbook-list">
+
+  <div class="detailed-workbook" *ngFor="let workbook of workbooks$ | async">
+    <div class="detailed-workbook__summary-container">
+      <div class="detailed-workbook__summary">
+        <div><a href="{{ workbook.url }}" title="_blank" class="detailed-workbook__title">{{ workbook.name }}</a></div>
+        <div class="detailed-workbook__labels">
+          <span class="detailed-workbook__label" *ngFor="let label of workbook.labels | slice:0:3">{{ label }}</span>
+          <span class="detailed-workbook__more-labels" *ngIf="workbook.labels.length > 3"> +3 more</span>
+        </div>
+        <div class="detailed-workbook__description">{{ workbook.description }}</div>
+        <div class="detailed-workbook__actions">
+          <span class="detailed-workbook__like">Like</span>
+          <span class="detailed-workbook__comment">Comment</span>
+          <span class="detailed-workbook__share">Share</span>
+        </div>
+      </div>
+
+      <div class="detailed-workbook__preview">
+        <!-- Star here; TODO: Convert to component? -->
+        <div class="detailed-workbook__star" [ngClass]="{ 'detailed-workbook__star--empty': !workbook.isLiked }"></div>
+        <a target="_blank" href="{{ workbook.url }}">
+          <img class="detailed-workbook__thumbnail" [src]="workbook.thumbnailUrl" />
+        </a>
+      </div>
+    </div>
+
+    <div class="detailed-workbook__comments-container">
+      <div class="detailed-workbook__comments-meta">
+        <i class="home-thumbs-up"></i> <span class="detailed-workbook__likes-count">{{ workbook.likes }} likes</span>
+        <span class="detailed-workbook__comment-count">{{ workbook.comments.length }} comments</span>
+      </div>
+
+      <div class="detailed-workbook__comments">
+        <!-- Comments -->
+        <div class="detailed-workbook__comments-toggle">Show more comments</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

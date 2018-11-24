@@ -1,0 +1,88 @@
+@import 'mixin';
+@import 'flexbox';
+
+.menu-bar {
+    border-bottom: 1px solid black;
+    font-size: 22px;
+    height: 50px;
+    padding: 8px;
+
+    .navbar-brand {
+        margin-left: 8px;
+        color: white;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .nav-link {
+        padding: 2px 0;
+
+        &:hover {
+            background: #1A2633;
+        }
+    }
+
+    &__item {
+        @include flexbox();
+        @include flex-direction(column);
+
+        color: #dad6d6;
+        height: 45px;
+        padding: 2px 20px 0 20px;
+        text-align: center;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__label {
+        font-size: 10px;
+        text-align: center;
+        position: relative;
+        top: -1px;
+    }
+
+    &__icon {
+        height: 26px;
+        position: relative;
+        padding-top: 3px;
+
+        &::before {
+            transform: translateX(-50%);
+        }
+
+        &--home {
+            &::before {
+                @include icon('home', 25px, 25px);
+            }
+        }
+
+        &--access {
+            &::before {
+                @include icon('lock', 25px, 25px);
+            }
+        }
+
+        &--support {
+            &::before {
+                @include icon('phone', 25px, 25px);
+            }
+        }
+
+        &--db-tableau {
+            &::before {
+                @include icon('braille', 25px, 25px);
+            }
+        }
+
+        &--admin {
+            &::before {
+                @include icon('cog', 25px, 25px);
+            }
+        }
+
+    }
+}

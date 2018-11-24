@@ -1,0 +1,37 @@
+@import 'mixin';
+
+.column-layout {
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+
+    &__sidebar-left {
+        background-color: #1a2633;
+        flex: 0 0 240px;
+        overflow-y: auto;
+        padding: 8px 16px;
+        display: none;
+
+        @include breakpoint('tablet-wide') {
+            display: flex;
+        }
+    }
+
+    &__panel-centre {
+        flex: 1;
+        overflow-y: auto;
+        background: #3E526B;
+    }
+
+    &__sidebar-right {
+        background-color: #1a2633;
+        flex: 0 0 300px;
+        overflow-y: auto;
+        padding: 8px;
+
+        &--collapsed {
+            display: none;
+        }
+    }
+}

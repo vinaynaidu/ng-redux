@@ -1,0 +1,8 @@
+<div class="key-workbooks">
+  <div class="key-workbook" *ngFor="let workbook of keyWorkbooks$ | async">
+    <a target="_blank" href="{{ workbook.url }}">
+      <img class="key-workbook__thumbnail" src="{{ workbook.thumbnailUrl }}">
+      <span class="key-workbook__label">{{ workbook.name }}</span>
+    </a>
+  </div>
+</div>

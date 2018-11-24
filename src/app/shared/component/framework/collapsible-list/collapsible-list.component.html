@@ -1,0 +1,19 @@
+<div class="collapsible-list" [ngClass]="{ 'collapsible-list--collapsed': isCollapsed,
+  'collapsible-list--left-border': showLeftBorder,
+  'collapsible-list--right-border': showRightBorder }">
+    <!-- [ngClass]="{  borderAlign === BorderAlignOptions.Left,
+                'collapsible-list--right-border': borderAlign === BorderAlignOptions.Right }"> -->
+  <div class="collapsible-list__header" (click)="toggleContentVisibility()">
+    <a class="collapsible-list__title">{{ headerText }}</a>
+    <!-- <app-loading-bar [loaderState]="loaderState"></app-loading-bar> -->
+  </div>
+  <div class="collapsible-list__content"
+    [ngStyle]="{ 'height': isCollapsed ? '0' : contentHeight + 'px' }">
+
+    <ul class="collapsible-list__list">
+        <li *ngFor="let item of listItems" class="collapsible-list__list-item">
+          <a href="item.url" target="_blank">{{ item.name }}</a>
+        </li>
+      </ul>
+    </div>
+</div>

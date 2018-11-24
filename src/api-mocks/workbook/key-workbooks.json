@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Stercorarius longicausus",
+        "url": "http://dummyimage.com/122x168.png/dddddd/000000",
+        "thumbnailUrl": "http://dummyimage.com/192x192.png/dddddd/000000"
+    },
+    {
+        "id": 2,
+        "name": "Pseudocheirus peregrinus",
+        "url": "http://dummyimage.com/177x226.jpg/ff4444/ffffff",
+        "thumbnailUrl": "http://dummyimage.com/192x192.png/dddddd/000000"
+    },
+    {
+        "id": 3,
+        "name": "Semnopithecus entellus",
+        "url": "http://dummyimage.com/250x247.png/dddddd/000000",
+        "thumbnailUrl": "http://dummyimage.com/192x192.png/dddddd/000000"
+    },
+    {
+        "id": 4,
+        "name": "Thamnolaea cinnmomeiventris",
+        "url": "http://dummyimage.com/146x155.png/dddddd/000000",
+        "thumbnailUrl": "http://dummyimage.com/192x192.png/dddddd/000000"
+    }
+]
