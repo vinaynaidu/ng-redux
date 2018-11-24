@@ -1,6 +1,4 @@
-# CtsArchTableauPrototyping
-
-UI documentation: https://confluence.intranet.db.com/display/CTSARCH/UI+Architecture
+# NG Redux
 
 ## Development server
 
